@@ -344,8 +344,8 @@ body::before { content:""; position: fixed; inset:0; z-index:-1;
 .face .txt { font-size: var(--fs-display-md); line-height: var(--lh-snug); font-weight: var(--fw-semibold);
   color: var(--color-text-primary); text-wrap: balance;
   word-break: keep-all; overflow-wrap: break-word; }
-.face.back .txt { font-size: var(--fs-heading); font-weight: var(--fw-regular);
-  color: var(--color-text-secondary); line-height: var(--lh-relaxed); text-wrap: pretty; }
+.face.back .txt { font-size: var(--fs-subheading); font-weight: var(--fw-regular);
+  color: var(--color-text-secondary); line-height: var(--lh-relaxed); text-wrap: pretty; text-align: left; }
 .flip-hint { position:absolute; bottom: var(--space-4); right: var(--space-5);
   font-size: var(--fs-caption); color: var(--color-text-muted); }
 /* 내비 */
@@ -359,7 +359,7 @@ body::before { content:""; position: fixed; inset:0; z-index:-1;
 kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
   background: rgba(255,255,255,0.62); border:1px solid var(--border-quiet); border-radius:6px; padding:1px 6px; }
 /* cloze */
-.card.cloze .face .txt { font-size: var(--fs-heading); font-weight: var(--fw-medium); line-height: var(--lh-relaxed); }
+.card.cloze .face .txt { font-size: var(--fs-subheading); font-weight: var(--fw-medium); line-height: var(--lh-relaxed); text-align: left; }
 .cloze-blank { display:inline-block; min-width: 2.4em; text-align:center; padding: 0 8px; border-radius: var(--radius-pill);
   background: var(--surface-tint-violet); color: var(--color-prism-violet); font-weight: var(--fw-semibold);
   border: 1px dashed var(--border-prism); }
@@ -385,7 +385,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 1</span></div>
-            <div class="txt">최초 사용: Gordon Guyatt / EBM의 아버지: David Sackett (McMaster University 임상역학 교수)</div>
+            <div class="txt">최초 사용: Gordon Guyatt<br>EBM의 아버지: David Sackett (McMaster University 임상역학 교수)</div>
           </div>
         </div>
       </article>
@@ -406,12 +406,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3요소: ① <span class="cloze-blank">[ ? ]</span>(문헌이 말하는 것) ② clinical expertise(임상의가 아는 것) ③ patient values(환자가 원하는 것)<div class="hint">힌트: 문헌 근거</div></div>
+            <div class="txt">EBM의 3요소:<br>① <span class="cloze-blank">[ ? ]</span>(문헌이 말하는 것)<br>② clinical expertise(임상의가 아는 것)<br>③ patient values(환자가 원하는 것)<div class="hint">힌트: 문헌 근거</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3요소: ① <span class="cloze-reveal">best research evidence</span>(문헌이 말하는 것) ② clinical expertise(임상의가 아는 것) ③ patient values(환자가 원하는 것)</div>
+            <div class="txt">EBM의 3요소:<br>① <span class="cloze-reveal">best research evidence</span>(문헌이 말하는 것)<br>② clinical expertise(임상의가 아는 것)<br>③ patient values(환자가 원하는 것)</div>
           </div>
         </div>
       </article>
@@ -419,12 +419,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3요소: ① best research evidence(문헌이 말하는 것) ② <span class="cloze-blank">[ ? ]</span>(임상의가 아는 것) ③ patient values(환자가 원하는 것)<div class="hint">힌트: 임상 전문성</div></div>
+            <div class="txt">EBM의 3요소:<br>① best research evidence(문헌이 말하는 것)<br>② <span class="cloze-blank">[ ? ]</span>(임상의가 아는 것)<br>③ patient values(환자가 원하는 것)<div class="hint">힌트: 임상 전문성</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3요소: ① best research evidence(문헌이 말하는 것) ② <span class="cloze-reveal">clinical expertise</span>(임상의가 아는 것) ③ patient values(환자가 원하는 것)</div>
+            <div class="txt">EBM의 3요소:<br>① best research evidence(문헌이 말하는 것)<br>② <span class="cloze-reveal">clinical expertise</span>(임상의가 아는 것)<br>③ patient values(환자가 원하는 것)</div>
           </div>
         </div>
       </article>
@@ -432,12 +432,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3단계: ① evidence summaries(근거 요약) ② <span class="cloze-blank">[ ? ]</span>(근거의 신뢰도) ③ decision making(의사결정)<div class="hint">힌트: 근거 신뢰도 평가</div></div>
+            <div class="txt">EBM의 3단계:<br>① evidence summaries(근거 요약)<br>② <span class="cloze-blank">[ ? ]</span>(근거의 신뢰도)<br>③ decision making(의사결정)<div class="hint">힌트: 근거 신뢰도 평가</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3단계: ① evidence summaries(근거 요약) ② <span class="cloze-reveal">confidence of evidence</span>(근거의 신뢰도) ③ decision making(의사결정)</div>
+            <div class="txt">EBM의 3단계:<br>① evidence summaries(근거 요약)<br>② <span class="cloze-reveal">confidence of evidence</span>(근거의 신뢰도)<br>③ decision making(의사결정)</div>
           </div>
         </div>
       </article>
@@ -458,12 +458,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">관찰연구 3종: <span class="cloze-blank">[ ? ]</span>(cross-sectional study) · 환자대조군연구(case-control study) · 코호트연구(cohort study)<div class="hint">힌트: 시간 흐름 없이 한 시점 측정</div></div>
+            <div class="txt">관찰연구 3종:<br><span class="cloze-blank">[ ? ]</span>(cross-sectional study)<br>환자대조군연구(case-control study)<br>코호트연구(cohort study)<div class="hint">힌트: 시간 흐름 없이 한 시점 측정</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">관찰연구 3종: <span class="cloze-reveal">단면연구</span>(cross-sectional study) · 환자대조군연구(case-control study) · 코호트연구(cohort study)</div>
+            <div class="txt">관찰연구 3종:<br><span class="cloze-reveal">단면연구</span>(cross-sectional study)<br>환자대조군연구(case-control study)<br>코호트연구(cohort study)</div>
           </div>
         </div>
       </article>
@@ -476,7 +476,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span></div>
-            <div class="txt">지표: 교차비(OR) / 적합: 희귀 질환·긴 잠복기 질환 / 불가: 유병률·발생률 산출 불가, 회상비뚤림 주의</div>
+            <div class="txt">지표: 교차비(OR)<br>적합: 희귀 질환·긴 잠복기 질환<br>불가: 유병률·발생률 산출 불가, 회상비뚤림 주의</div>
           </div>
         </div>
       </article>
@@ -489,7 +489,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span></div>
-            <div class="txt">지표: 상대위험도(RR) / 특징: 노출군 vs 비노출군 추적, 희귀 노출 연구 적합 / 전향적=비용·시간 큼, 후향적=혼란변수 데이터 불완전</div>
+            <div class="txt">지표: 상대위험도(RR)<br>특징: 노출군 vs 비노출군 추적, 희귀 노출 연구 적합<br>전향적=비용·시간 큼, 후향적=혼란변수 데이터 불완전</div>
           </div>
         </div>
       </article>
@@ -497,12 +497,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">실험연구: 연구자가 직접 요인 노출을 결정(관찰연구와 차이) + 주로 <span class="cloze-blank">[ ? ]</span>로 변수 조정 / 선정기준이 넓으면 <span class="cloze-blank">[ ? ]</span> / 좁으면 피험자 확보 어려움<div class="hint">힌트: 변수 조정 방법 / 선정기준 넓을 때 장점</div></div>
+            <div class="txt">실험연구: 연구자가 직접 요인 노출을 결정(관찰연구와 차이) + 주로 <span class="cloze-blank">[ ? ]</span>로 변수 조정<br>선정기준이 넓으면 <span class="cloze-blank">[ ? ]</span><br>좁으면 피험자 확보 어려움<div class="hint">힌트: 변수 조정 방법 / 선정기준 넓을 때 장점</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">실험연구: 연구자가 직접 요인 노출을 결정(관찰연구와 차이) + 주로 <span class="cloze-reveal">무작위화(randomization)</span>로 변수 조정 / 선정기준이 넓으면 <span class="cloze-reveal">일반화 유리</span> / 좁으면 피험자 확보 어려움</div>
+            <div class="txt">실험연구: 연구자가 직접 요인 노출을 결정(관찰연구와 차이) + 주로 <span class="cloze-reveal">무작위화(randomization)</span>로 변수 조정<br>선정기준이 넓으면 <span class="cloze-reveal">일반화 유리</span><br>좁으면 피험자 확보 어려움</div>
           </div>
         </div>
       </article>
@@ -510,12 +510,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">전통적 근거 피라미드(아래→위): 증례보고 → 환자대조군연구 → 코호트연구 → RCT → <span class="cloze-blank">[ ? ]</span>. 현재는 체계적문헌고찰을 피라미드에서 분리(chopped off)하는 관점으로 변화.<div class="hint">힌트: 피라미드 최상단</div></div>
+            <div class="txt">전통적 근거 피라미드(아래→위):<br>증례보고<br>→ 환자대조군연구<br>→ 코호트연구<br>→ RCT<br>→ <span class="cloze-blank">[ ? ]</span><br>현재는 체계적문헌고찰을 피라미드에서 분리(chopped off)하는 관점으로 변화.<div class="hint">힌트: 피라미드 최상단</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">전통적 근거 피라미드(아래→위): 증례보고 → 환자대조군연구 → 코호트연구 → RCT → <span class="cloze-reveal">체계적문헌고찰/메타분석</span>. 현재는 체계적문헌고찰을 피라미드에서 분리(chopped off)하는 관점으로 변화.</div>
+            <div class="txt">전통적 근거 피라미드(아래→위):<br>증례보고<br>→ 환자대조군연구<br>→ 코호트연구<br>→ RCT<br>→ <span class="cloze-reveal">체계적문헌고찰/메타분석</span><br>현재는 체계적문헌고찰을 피라미드에서 분리(chopped off)하는 관점으로 변화.</div>
           </div>
         </div>
       </article>
@@ -523,12 +523,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">임상시험 절차: 연구설계 → 대상자 모집 → 동의서·기초조사 → <span class="cloze-blank">[ ? ]</span> → 눈가림 → 치료 순응도 평가 → 결과측정 → 자료분석<div class="hint">힌트: 편향 없이 집단 배정</div></div>
+            <div class="txt">임상시험 절차:<br>연구설계<br>→ 대상자 모집<br>→ 동의서·기초조사<br>→ <span class="cloze-blank">[ ? ]</span><br>→ 눈가림<br>→ 치료 순응도 평가<br>→ 결과측정<br>→ 자료분석<div class="hint">힌트: 편향 없이 집단 배정</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">임상시험 절차: 연구설계 → 대상자 모집 → 동의서·기초조사 → <span class="cloze-reveal">무작위배정</span> → 눈가림 → 치료 순응도 평가 → 결과측정 → 자료분석</div>
+            <div class="txt">임상시험 절차:<br>연구설계<br>→ 대상자 모집<br>→ 동의서·기초조사<br>→ <span class="cloze-reveal">무작위배정</span><br>→ 눈가림<br>→ 치료 순응도 평가<br>→ 결과측정<br>→ 자료분석</div>
           </div>
         </div>
       </article>
@@ -541,7 +541,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag imp">중요</span></div>
-            <div class="txt">평행설계: 한 가지 치료만 적용 / 교차설계: 처치군-비교군 맞바꿈, 환자 자신이 대조군 역할, 적은 표본수로 높은 검정력, 만성 질환(우울증·피부질환 등)에 유용</div>
+            <div class="txt">평행설계: 한 가지 치료만 적용<br>교차설계: 처치군-비교군 맞바꿈, 환자 자신이 대조군 역할, 적은 표본수로 높은 검정력, 만성 질환(우울증·피부질환 등)에 유용</div>
           </div>
         </div>
       </article>
@@ -554,7 +554,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag imp">중요</span></div>
-            <div class="txt">먼저 투여한 약물의 잔류가 다음 투여 약물에 영향을 주는 현상 / 예방: 휴약기간(wash-out period) 설정</div>
+            <div class="txt">먼저 투여한 약물의 잔류가 다음 투여 약물에 영향을 주는 현상<br>예방: 휴약기간(wash-out period) 설정</div>
           </div>
         </div>
       </article>
@@ -562,12 +562,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">동시비교군 4종: 무치료군 · <span class="cloze-blank">[ ? ]</span> · 표준치료제비교군 · 저용량비교군 / 과거비교군: 설계 간단하나 비교성 낮음 / 위약 사용 조건: 표준치료 없음 · 효과 미입증 · <span class="cloze-blank">[ ? ]</span> · 치료 안 해도 문제 없음<div class="hint">힌트: 위약 대조군 / 위약 사용 조건 중 하나</div></div>
+            <div class="txt">동시비교군 4종:<br>무치료군<br><span class="cloze-blank">[ ? ]</span><br>표준치료제비교군<br>저용량비교군<br>과거비교군: 설계 간단하나 비교성 낮음<br>위약 사용 조건: 표준치료 없음·효과 미입증·<span class="cloze-blank">[ ? ]</span>·치료 안 해도 문제 없음<div class="hint">힌트: 위약 대조군 / 위약 사용 조건 중 하나</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">동시비교군 4종: 무치료군 · <span class="cloze-reveal">위약치료군</span> · 표준치료제비교군 · 저용량비교군 / 과거비교군: 설계 간단하나 비교성 낮음 / 위약 사용 조건: 표준치료 없음 · 효과 미입증 · <span class="cloze-reveal">위약효과 존재</span> · 치료 안 해도 문제 없음</div>
+            <div class="txt">동시비교군 4종:<br>무치료군<br><span class="cloze-reveal">위약치료군</span><br>표준치료제비교군<br>저용량비교군<br>과거비교군: 설계 간단하나 비교성 낮음<br>위약 사용 조건: 표준치료 없음·효과 미입증·<span class="cloze-reveal">위약효과 존재</span>·치료 안 해도 문제 없음</div>
           </div>
         </div>
       </article>
@@ -575,12 +575,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">표본수 산출 고려사항: 효과 크기(작을수록 대상자 더 필요) · 제1종 오류 · 제2종 오류 · <span class="cloze-blank">[ ? ]</span>(minimally important difference, 임상적으로 의미 있는 최소 차이값, 전문가 합의로 결정)<div class="hint">힌트: 최소 임상적 의미 차이</div></div>
+            <div class="txt">표본수 산출 고려사항:<br>효과 크기(작을수록 대상자 더 필요)<br>제1종 오류<br>제2종 오류<br><span class="cloze-blank">[ ? ]</span>(minimally important difference, 임상적으로 의미 있는 최소 차이값, 전문가 합의로 결정)<div class="hint">힌트: 최소 임상적 의미 차이</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">표본수 산출 고려사항: 효과 크기(작을수록 대상자 더 필요) · 제1종 오류 · 제2종 오류 · <span class="cloze-reveal">MID</span>(minimally important difference, 임상적으로 의미 있는 최소 차이값, 전문가 합의로 결정)</div>
+            <div class="txt">표본수 산출 고려사항:<br>효과 크기(작을수록 대상자 더 필요)<br>제1종 오류<br>제2종 오류<br><span class="cloze-reveal">MID</span>(minimally important difference, 임상적으로 의미 있는 최소 차이값, 전문가 합의로 결정)</div>
           </div>
         </div>
       </article>
@@ -588,12 +588,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">기초조사(baseline) 목적: ① 집단 간 특성 비교 ② 선정·배제기준 확인 ③ <span class="cloze-blank">[ ? ]</span> / 무작위배정 방법: 단순·블록·<span class="cloze-blank">[ ? ]</span> 무작위배정법<div class="hint">힌트: 기초조사 3번째 목적 / 계층화 무작위배정</div></div>
+            <div class="txt">기초조사(baseline) 목적:<br>① 집단 간 특성 비교<br>② 선정·배제기준 확인<br>③ <span class="cloze-blank">[ ? ]</span><br>무작위배정 방법: 단순·블록·<span class="cloze-blank">[ ? ]</span> 무작위배정법<div class="hint">힌트: 기초조사 3번째 목적 / 계층화 무작위배정</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">기초조사(baseline) 목적: ① 집단 간 특성 비교 ② 선정·배제기준 확인 ③ <span class="cloze-reveal">우연에 의한 변수 분포차이를 분석 단계에 반영</span> / 무작위배정 방법: 단순·블록·<span class="cloze-reveal">계층화</span> 무작위배정법</div>
+            <div class="txt">기초조사(baseline) 목적:<br>① 집단 간 특성 비교<br>② 선정·배제기준 확인<br>③ <span class="cloze-reveal">우연에 의한 변수 분포차이를 분석 단계에 반영</span><br>무작위배정 방법: 단순·블록·<span class="cloze-reveal">계층화</span> 무작위배정법</div>
           </div>
         </div>
       </article>
@@ -601,12 +601,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">무작위배정(random allocation) 목적 3가지: ① <span class="cloze-blank">[ ? ]</span> ② 선택편견 감소 및 비교성 극대화 ③ 통계적 분석의 전제조건(독립집단) 충족<div class="hint">힌트: 윤리</div></div>
+            <div class="txt">무작위배정(random allocation) 목적 3가지:<br>① <span class="cloze-blank">[ ? ]</span><br>② 선택편견 감소 및 비교성 극대화<br>③ 통계적 분석의 전제조건(독립집단) 충족<div class="hint">힌트: 윤리</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">무작위배정(random allocation) 목적 3가지: ① <span class="cloze-reveal">윤리적 목적</span> ② 선택편견 감소 및 비교성 극대화 ③ 통계적 분석의 전제조건(독립집단) 충족</div>
+            <div class="txt">무작위배정(random allocation) 목적 3가지:<br>① <span class="cloze-reveal">윤리적 목적</span><br>② 선택편견 감소 및 비교성 극대화<br>③ 통계적 분석의 전제조건(독립집단) 충족</div>
           </div>
         </div>
       </article>
@@ -619,7 +619,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag imp">중요</span></div>
-            <div class="txt">알고 있는 혼란변수뿐 아니라 모르는 혼란변수도 집단별 분포를 같게 해줌 — 단, 완전히 같아지지는 않으며 잔여 변동은 통계 분석 시 통제</div>
+            <div class="txt">알고 있는 혼란변수뿐 아니라 모르는 혼란변수도 집단별 분포를 같게 해줌<br>단, 완전히 같아지지는 않으며 잔여 변동은 통계 분석 시 통제</div>
           </div>
         </div>
       </article>
@@ -627,12 +627,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">눈가림법 종류: 단일눈가림(연구대상자만) · <span class="cloze-blank">[ ? ]</span>(연구대상자+의료인력) · 삼측눈가림(연구대상자+의료인력+의학통계학자)<div class="hint">힌트: double blind</div></div>
+            <div class="txt">눈가림법 종류:<br>단일눈가림(연구대상자만)<br><span class="cloze-blank">[ ? ]</span>(연구대상자+의료인력)<br>삼측눈가림(연구대상자+의료인력+의학통계학자)<div class="hint">힌트: double blind</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">눈가림법 종류: 단일눈가림(연구대상자만) · <span class="cloze-reveal">양측눈가림</span>(연구대상자+의료인력) · 삼측눈가림(연구대상자+의료인력+의학통계학자)</div>
+            <div class="txt">눈가림법 종류:<br>단일눈가림(연구대상자만)<br><span class="cloze-reveal">양측눈가림</span>(연구대상자+의료인력)<br>삼측눈가림(연구대상자+의료인력+의학통계학자)</div>
           </div>
         </div>
       </article>
@@ -640,12 +640,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">눈가림법이 사실상 불가능한 경우: <span class="cloze-blank">[ ? ]</span>(의료인력 눈가림 불가) · 간병서비스 등 / 순응도 측정 3종: 자가 보고 · <span class="cloze-blank">[ ? ]</span> · 대사산물 농도 측정<div class="hint">힌트: 눈가림 불가 유형 / pill count</div></div>
+            <div class="txt">눈가림법이 사실상 불가능한 경우:<br><span class="cloze-blank">[ ? ]</span>(의료인력 눈가림 불가)<br>간병서비스 등<br>순응도 측정 3종:<br>자가 보고<br><span class="cloze-blank">[ ? ]</span><br>대사산물 농도 측정<div class="hint">힌트: 눈가림 불가 유형 / pill count</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">눈가림법이 사실상 불가능한 경우: <span class="cloze-reveal">수술기법</span>(의료인력 눈가림 불가) · 간병서비스 등 / 순응도 측정 3종: 자가 보고 · <span class="cloze-reveal">약물 세기(pill count)</span> · 대사산물 농도 측정</div>
+            <div class="txt">눈가림법이 사실상 불가능한 경우:<br><span class="cloze-reveal">수술기법</span>(의료인력 눈가림 불가)<br>간병서비스 등<br>순응도 측정 3종:<br>자가 보고<br><span class="cloze-reveal">약물 세기(pill count)</span><br>대사산물 농도 측정</div>
           </div>
         </div>
       </article>
@@ -653,12 +653,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">결과변수 선정 고려사항 4가지: ① 흔하지 않으면 관련 다른 변수 선정 ② <span class="cloze-blank">[ ? ]</span> ③ 여러 측면에서 여러 변수 측정 ④ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ②정의·측정 방식 / ④탈락 대비</div></div>
+            <div class="txt">결과변수 선정 고려사항 4가지:<br>① 흔하지 않으면 관련 다른 변수 선정<br>② <span class="cloze-blank">[ ? ]</span><br>③ 여러 측면에서 여러 변수 측정<br>④ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ②정의·측정 방식 / ④탈락 대비</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">결과변수 선정 고려사항 4가지: ① 흔하지 않으면 관련 다른 변수 선정 ② <span class="cloze-reveal">정의 명확히, 가능하면 연속변수로</span> ③ 여러 측면에서 여러 변수 측정 ④ <span class="cloze-reveal">중도탈락 고려하여 여러 차례 측정</span></div>
+            <div class="txt">결과변수 선정 고려사항 4가지:<br>① 흔하지 않으면 관련 다른 변수 선정<br>② <span class="cloze-reveal">정의 명확히, 가능하면 연속변수로</span><br>③ 여러 측면에서 여러 변수 측정<br>④ <span class="cloze-reveal">중도탈락 고려하여 여러 차례 측정</span></div>
           </div>
         </div>
       </article>
@@ -671,7 +671,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag imp">중요</span></div>
-            <div class="txt">직접 임상 변화 측정이 어려울 때 쓰는 간접 변수 / 예: 항암제 효과→완치 대신 질병 관해 여부, 선천성기형 관계→출생 시 체중</div>
+            <div class="txt">직접 임상 변화 측정이 어려울 때 쓰는 간접 변수<br>예: 항암제 효과→완치 대신 질병 관해 여부, 선천성기형 관계→출생 시 체중</div>
           </div>
         </div>
       </article>
@@ -679,12 +679,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">ITT(배정대로분석): 실제 받은 치료·계획 위반·순응 정도·중도 탈락과 관계없이 처음 <span class="cloze-blank">[ ? ]</span>으로 비교. 보수적 결과, <span class="cloze-blank">[ ? ]</span>에 주로 사용.<div class="hint">힌트: randomized 그룹</div></div>
+            <div class="txt">ITT(배정대로분석): 실제 받은 치료·계획 위반·순응 정도·중도 탈락과 관계없이 처음 <span class="cloze-blank">[ ? ]</span>으로 비교.<br>보수적 결과, <span class="cloze-blank">[ ? ]</span>에 주로 사용.<div class="hint">힌트: randomized 그룹</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">ITT(배정대로분석): 실제 받은 치료·계획 위반·순응 정도·중도 탈락과 관계없이 처음 <span class="cloze-reveal">배정된 그룹</span>으로 비교. 보수적 결과, <span class="cloze-reveal">우위성 검정</span>에 주로 사용.</div>
+            <div class="txt">ITT(배정대로분석): 실제 받은 치료·계획 위반·순응 정도·중도 탈락과 관계없이 처음 <span class="cloze-reveal">배정된 그룹</span>으로 비교.<br>보수적 결과, <span class="cloze-reveal">우위성 검정</span>에 주로 사용.</div>
           </div>
         </div>
       </article>
@@ -692,12 +692,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">분석군 3종: FA(전체분석) = 정당한 제외사유 대상자만 최소 제외 / <span class="cloze-blank">[ ? ]</span> = 치료오류·위반·저순응도·탈락자 제외, 효과 최대화하나 비뚤림 가능, 보조적 사용 / <span class="cloze-blank">[ ? ]</span> = 한 번이라도 시험약 복용한 전체 — 부작용 확인<div class="hint">힌트: per-protocol / safety set</div></div>
+            <div class="txt">분석군 3종:<br>FA(전체분석) = 정당한 제외사유 대상자만 최소 제외<br><span class="cloze-blank">[ ? ]</span> = 치료오류·위반·저순응도·탈락자 제외, 효과 최대화하나 비뚤림 가능, 보조적 사용<br><span class="cloze-blank">[ ? ]</span> = 한 번이라도 시험약 복용한 전체 — 부작용 확인<div class="hint">힌트: per-protocol / safety set</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">분석군 3종: FA(전체분석) = 정당한 제외사유 대상자만 최소 제외 / <span class="cloze-reveal">PP(계획서순응분석)</span> = 치료오류·위반·저순응도·탈락자 제외, 효과 최대화하나 비뚤림 가능, 보조적 사용 / <span class="cloze-reveal">안전성분석군</span> = 한 번이라도 시험약 복용한 전체 — 부작용 확인</div>
+            <div class="txt">분석군 3종:<br>FA(전체분석) = 정당한 제외사유 대상자만 최소 제외<br><span class="cloze-reveal">PP(계획서순응분석)</span> = 치료오류·위반·저순응도·탈락자 제외, 효과 최대화하나 비뚤림 가능, 보조적 사용<br><span class="cloze-reveal">안전성분석군</span> = 한 번이라도 시험약 복용한 전체 — 부작용 확인</div>
           </div>
         </div>
       </article>
@@ -705,12 +705,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 3</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">PICO 구성: Population(환자군) · <span class="cloze-blank">[ ? ]</span>(중재) · Comparator(비교 대상) · Outcome(결과)<div class="hint">힌트: 연구에서 적용하는 것</div></div>
+            <div class="txt">PICO 구성:<br>Population(환자군)<br><span class="cloze-blank">[ ? ]</span>(중재)<br>Comparator(비교 대상)<br>Outcome(결과)<div class="hint">힌트: 연구에서 적용하는 것</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 3</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">PICO 구성: Population(환자군) · <span class="cloze-reveal">Intervention</span>(중재) · Comparator(비교 대상) · Outcome(결과)</div>
+            <div class="txt">PICO 구성:<br>Population(환자군)<br><span class="cloze-reveal">Intervention</span>(중재)<br>Comparator(비교 대상)<br>Outcome(결과)</div>
           </div>
         </div>
       </article>
@@ -723,7 +723,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 3</span><span class="tag imp">중요</span></div>
-            <div class="txt">P: 폐경 전후 여성 / I: HRT 시행 / C: 비호르몬 치료 / O: 5년 후 사망률 증감</div>
+            <div class="txt">P: 폐경 전후 여성<br>I: HRT 시행<br>C: 비호르몬 치료<br>O: 5년 후 사망률 증감</div>
           </div>
         </div>
       </article>
@@ -731,12 +731,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 3</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">PICO 형식을 사용하는 이유 4가지: ① <span class="cloze-blank">[ ? ]</span> ② 선정·배제기준 결정 ③ 문헌 검색 전략 수립 ④ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ①임상질문 성립 / ④데이터 활용 방향</div></div>
+            <div class="txt">PICO 형식을 사용하는 이유 4가지:<br>① <span class="cloze-blank">[ ? ]</span><br>② 선정·배제기준 결정<br>③ 문헌 검색 전략 수립<br>④ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ①임상질문 성립 / ④데이터 활용 방향</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 3</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">PICO 형식을 사용하는 이유 4가지: ① <span class="cloze-reveal">답변 가능한 질문 구성</span> ② 선정·배제기준 결정 ③ 문헌 검색 전략 수립 ④ <span class="cloze-reveal">추출 데이터 유형·합성 방식·결과 제시 방법 결정</span></div>
+            <div class="txt">PICO 형식을 사용하는 이유 4가지:<br>① <span class="cloze-reveal">답변 가능한 질문 구성</span><br>② 선정·배제기준 결정<br>③ 문헌 검색 전략 수립<br>④ <span class="cloze-reveal">추출 데이터 유형·합성 방식·결과 제시 방법 결정</span></div>
           </div>
         </div>
       </article>
@@ -762,7 +762,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 3</span></div>
-            <div class="txt">환자중심결과: 환자가 직접 가치를 두는 것(증상·이환율·사망률·삶의 질) / 대리결과: 검사실·생리적 측정치, 환자 행동에 직접 영향 주지 않음</div>
+            <div class="txt">환자중심결과: 환자가 직접 가치를 두는 것(증상·이환율·사망률·삶의 질)<br>대리결과: 검사실·생리적 측정치, 환자 행동에 직접 영향 주지 않음</div>
           </div>
         </div>
       </article>
@@ -770,12 +770,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 3</span><span class="tag">CLOZE</span></div>
-            <div class="txt">임상핵심질문 주제 선정 기준 3가지: ① <span class="cloze-blank">[ ? ]</span> ② 근거와 진료 사이 간극이 큰 주제 ③ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ①임상 중요성 / ③개발 파급력</div></div>
+            <div class="txt">임상핵심질문 주제 선정 기준 3가지:<br>① <span class="cloze-blank">[ ? ]</span><br>② 근거와 진료 사이 간극이 큰 주제<br>③ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ①임상 중요성 / ③개발 파급력</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 3</span><span class="tag">CLOZE</span></div>
-            <div class="txt">임상핵심질문 주제 선정 기준 3가지: ① <span class="cloze-reveal">임상적으로 중요한 주제</span> ② 근거와 진료 사이 간극이 큰 주제 ③ <span class="cloze-reveal">개발효과가 큰 주제</span></div>
+            <div class="txt">임상핵심질문 주제 선정 기준 3가지:<br>① <span class="cloze-reveal">임상적으로 중요한 주제</span><br>② 근거와 진료 사이 간극이 큰 주제<br>③ <span class="cloze-reveal">개발효과가 큰 주제</span></div>
           </div>
         </div>
       </article>
@@ -796,12 +796,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">핵심 국외 DB: MEDLINE(미국 국립의학도서관, PubMed/OVID) · <span class="cloze-blank">[ ? ]</span>(유럽권 저널+MEDLINE 일부, 낮은 검색특이도) · Cochrane Library(체계적문헌고찰·메타분석·임상시험, 2차 DB)<div class="hint">힌트: 유럽권 DB</div></div>
+            <div class="txt">핵심 국외 DB:<br>MEDLINE(미국 국립의학도서관, PubMed/OVID)<br><span class="cloze-blank">[ ? ]</span>(유럽권 저널+MEDLINE 일부, 낮은 검색특이도)<br>Cochrane Library(체계적문헌고찰·메타분석·임상시험, 2차 DB)<div class="hint">힌트: 유럽권 DB</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">핵심 국외 DB: MEDLINE(미국 국립의학도서관, PubMed/OVID) · <span class="cloze-reveal">EMBASE</span>(유럽권 저널+MEDLINE 일부, 낮은 검색특이도) · Cochrane Library(체계적문헌고찰·메타분석·임상시험, 2차 DB)</div>
+            <div class="txt">핵심 국외 DB:<br>MEDLINE(미국 국립의학도서관, PubMed/OVID)<br><span class="cloze-reveal">EMBASE</span>(유럽권 저널+MEDLINE 일부, 낮은 검색특이도)<br>Cochrane Library(체계적문헌고찰·메타분석·임상시험, 2차 DB)</div>
           </div>
         </div>
       </article>
@@ -814,7 +814,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag imp">중요</span></div>
-            <div class="txt">MEDLINE: 미국 국립의학도서관, PubMed/OVID / EMBASE: 유럽권 저널+MEDLINE, 생의학·약물학, 낮은 검색특이도 / Cochrane: EBM 체계적문헌고찰·메타분석·임상시험, 2차 DB</div>
+            <div class="txt">MEDLINE: 미국 국립의학도서관, PubMed/OVID<br>EMBASE: 유럽권 저널+MEDLINE, 생의학·약물학, 낮은 검색특이도<br>Cochrane: EBM 체계적문헌고찰·메타분석·임상시험, 2차 DB</div>
           </div>
         </div>
       </article>
@@ -822,12 +822,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">국내 핵심 의학 DB: <span class="cloze-blank">[ ? ]</span>(대한의학학술지편집인협의회) / 기타: KMBASE · KISS · ScienceOn · KCI<div class="hint">힌트: 대한의학학술지편집인협의회</div></div>
+            <div class="txt">국내 핵심 의학 DB: <span class="cloze-blank">[ ? ]</span>(대한의학학술지편집인협의회)<br>기타: KMBASE·KISS·ScienceOn·KCI<div class="hint">힌트: 대한의학학술지편집인협의회</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">국내 핵심 의학 DB: <span class="cloze-reveal">KoreaMed</span>(대한의학학술지편집인협의회) / 기타: KMBASE · KISS · ScienceOn · KCI</div>
+            <div class="txt">국내 핵심 의학 DB: <span class="cloze-reveal">KoreaMed</span>(대한의학학술지편집인협의회)<br>기타: KMBASE·KISS·ScienceOn·KCI</div>
           </div>
         </div>
       </article>
@@ -835,12 +835,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span></div>
-            <div class="txt">주제별 표준 DB: CINAHL(<span class="cloze-blank">[ ? ]</span>) · PsycINFO(<span class="cloze-blank">[ ? ]</span>) · SPORTDiscus(운동의학)<div class="hint">힌트: CINAHL 분야 / PsycINFO 분야</div></div>
+            <div class="txt">주제별 표준 DB:<br>CINAHL(<span class="cloze-blank">[ ? ]</span>)<br>PsycINFO(<span class="cloze-blank">[ ? ]</span>)<br>SPORTDiscus(운동의학)<div class="hint">힌트: CINAHL 분야 / PsycINFO 분야</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span></div>
-            <div class="txt">주제별 표준 DB: CINAHL(<span class="cloze-reveal">간호·보건</span>) · PsycINFO(<span class="cloze-reveal">심리학·정신의학·행동과학</span>) · SPORTDiscus(운동의학)</div>
+            <div class="txt">주제별 표준 DB:<br>CINAHL(<span class="cloze-reveal">간호·보건</span>)<br>PsycINFO(<span class="cloze-reveal">심리학·정신의학·행동과학</span>)<br>SPORTDiscus(운동의학)</div>
           </div>
         </div>
       </article>
@@ -853,7 +853,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span></div>
-            <div class="txt">미국 NIH 운영 / 220여 개 국가, 44만여 건 (글로벌 임상시험 등록 DB) / WHO: ICTRP</div>
+            <div class="txt">미국 NIH 운영<br>220여 개 국가, 44만여 건 (글로벌 임상시험 등록 DB)<br>WHO: ICTRP</div>
           </div>
         </div>
       </article>
@@ -861,12 +861,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">검색전략 설계 원칙: <span class="cloze-blank">[ ? ]</span>를 높이는 방향(wide search) + <span class="cloze-blank">[ ? ]</span>와 자연어(free text) 조합 + 불리언 연산자·인접검색·절단검색 사용 / 필터 사용은 최소화<div class="hint">힌트: 재현율을 높이는 방향</div></div>
+            <div class="txt">검색전략 설계 원칙:<br><span class="cloze-blank">[ ? ]</span>를 높이는 방향(wide search)<br><span class="cloze-blank">[ ? ]</span>와 자연어(free text) 조합<br>불리언 연산자·인접검색·절단검색 사용<br>필터 사용은 최소화<div class="hint">힌트: 재현율을 높이는 방향</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">검색전략 설계 원칙: <span class="cloze-reveal">민감도(재현율)</span>를 높이는 방향(wide search) + <span class="cloze-reveal">통제어(MeSH term)</span>와 자연어(free text) 조합 + 불리언 연산자·인접검색·절단검색 사용 / 필터 사용은 최소화</div>
+            <div class="txt">검색전략 설계 원칙:<br><span class="cloze-reveal">민감도(재현율)</span>를 높이는 방향(wide search)<br><span class="cloze-reveal">통제어(MeSH term)</span>와 자연어(free text) 조합<br>불리언 연산자·인접검색·절단검색 사용<br>필터 사용은 최소화</div>
           </div>
         </div>
       </article>
@@ -874,12 +874,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span></div>
-            <div class="txt">검색결과 제시 시 반드시 포함해야 하는 항목: ① <span class="cloze-blank">[ ? ]</span> ② 재현 가능한 검색식 ③ <span class="cloze-blank">[ ? ]</span> / 활용: PRISMA checklist<div class="hint">힌트: ①전체 결과 / ③DB 정보</div></div>
+            <div class="txt">검색결과 제시 시 반드시 포함해야 하는 항목:<br>① <span class="cloze-blank">[ ? ]</span><br>② 재현 가능한 검색식<br>③ <span class="cloze-blank">[ ? ]</span><br>활용: PRISMA checklist<div class="hint">힌트: ①전체 결과 / ③DB 정보</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span></div>
-            <div class="txt">검색결과 제시 시 반드시 포함해야 하는 항목: ① <span class="cloze-reveal">검색결과 전체</span> ② 재현 가능한 검색식 ③ <span class="cloze-reveal">DB명·coverage·검색 날짜</span> / 활용: PRISMA checklist</div>
+            <div class="txt">검색결과 제시 시 반드시 포함해야 하는 항목:<br>① <span class="cloze-reveal">검색결과 전체</span><br>② 재현 가능한 검색식<br>③ <span class="cloze-reveal">DB명·coverage·검색 날짜</span><br>활용: PRISMA checklist</div>
           </div>
         </div>
       </article>
@@ -887,12 +887,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">핵심 검색어 선택 방법: PubMed/Cochrane 검색 후 <span class="cloze-blank">[ ? ]</span>과 free text(동의어·entry term·약어) 수집 + PICO에 따른 핵심 참고문헌 5~10개로 검색전략 검증<div class="hint">힌트: 통제 어휘</div></div>
+            <div class="txt">핵심 검색어 선택 방법:<br>PubMed/Cochrane 검색 후 <span class="cloze-blank">[ ? ]</span>과 free text(동의어·entry term·약어) 수집<br>PICO에 따른 핵심 참고문헌 5~10개로 검색전략 검증<div class="hint">힌트: 통제 어휘</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">핵심 검색어 선택 방법: PubMed/Cochrane 검색 후 <span class="cloze-reveal">MeSH term</span>과 free text(동의어·entry term·약어) 수집 + PICO에 따른 핵심 참고문헌 5~10개로 검색전략 검증</div>
+            <div class="txt">핵심 검색어 선택 방법:<br>PubMed/Cochrane 검색 후 <span class="cloze-reveal">MeSH term</span>과 free text(동의어·entry term·약어) 수집<br>PICO에 따른 핵심 참고문헌 5~10개로 검색전략 검증</div>
           </div>
         </div>
       </article>
@@ -900,12 +900,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">상대위험도(RR) = <span class="cloze-blank">[ ? ]</span> / 사용 가능한 연구 설계: 코호트 · RCT (발생률 산출 가능해야 함)<div class="hint">힌트: RR 공식</div></div>
+            <div class="txt">상대위험도(RR) = <span class="cloze-blank">[ ? ]</span><br>사용 가능한 연구 설계: 코호트·RCT (발생률 산출 가능해야 함)<div class="hint">힌트: RR 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">상대위험도(RR) = <span class="cloze-reveal">노출군 사건 발생확률 ÷ 비노출군 사건 발생확률</span> / 사용 가능한 연구 설계: 코호트 · RCT (발생률 산출 가능해야 함)</div>
+            <div class="txt">상대위험도(RR) = <span class="cloze-reveal">노출군 사건 발생확률 ÷ 비노출군 사건 발생확률</span><br>사용 가능한 연구 설계: 코호트·RCT (발생률 산출 가능해야 함)</div>
           </div>
         </div>
       </article>
@@ -913,12 +913,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">교차비(OR) = <span class="cloze-blank">[ ? ]</span> / Odds = p_event / (1 - p_event) / 발생률 낮으면 OR ≈ RR 근사 가능<div class="hint">힌트: OR 공식</div></div>
+            <div class="txt">교차비(OR) = <span class="cloze-blank">[ ? ]</span><br>Odds = p_event / (1 - p_event)<br>발생률 낮으면 OR ≈ RR 근사 가능<div class="hint">힌트: OR 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">교차비(OR) = <span class="cloze-reveal">Odds_intervention / Odds_control</span> / Odds = p_event / (1 - p_event) / 발생률 낮으면 OR ≈ RR 근사 가능</div>
+            <div class="txt">교차비(OR) = <span class="cloze-reveal">Odds_intervention / Odds_control</span><br>Odds = p_event / (1 - p_event)<br>발생률 낮으면 OR ≈ RR 근사 가능</div>
           </div>
         </div>
       </article>
@@ -931,7 +931,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag imp">중요</span></div>
-            <div class="txt">RR은 발생률을 구할 수 있는 설계(코호트·RCT)에서만 사용 가능 / OR은 임상시험·환자대조군연구·코호트 등 다양한 상황에서 사용 가능, 로지스틱 회귀분석 결과와 일치 — 단 해석이 직관적이지 않음</div>
+            <div class="txt">RR은 발생률을 구할 수 있는 설계(코호트·RCT)에서만 사용 가능<br>OR은 임상시험·환자대조군연구·코호트 등 다양한 상황에서 사용 가능, 로지스틱 회귀분석 결과와 일치 — 단 해석이 직관적이지 않음</div>
           </div>
         </div>
       </article>
@@ -939,12 +939,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">위험차(RD) = p_intervention - p_control / ARR = <span class="cloze-blank">[ ? ]</span> / NNT = <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 절대위험감소·치료필요수 공식</div></div>
+            <div class="txt">위험차(RD) = p_intervention - p_control<br>ARR = <span class="cloze-blank">[ ? ]</span><br>NNT = <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 절대위험감소·치료필요수 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">위험차(RD) = p_intervention - p_control / ARR = <span class="cloze-reveal">(p_control - p_intervention) × 100%</span> / NNT = <span class="cloze-reveal">1 / ARR</span></div>
+            <div class="txt">위험차(RD) = p_intervention - p_control<br>ARR = <span class="cloze-reveal">(p_control - p_intervention) × 100%</span><br>NNT = <span class="cloze-reveal">1 / ARR</span></div>
           </div>
         </div>
       </article>
@@ -957,7 +957,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag imp">중요</span></div>
-            <div class="txt">한 명의 환자를 구하기(사건 1건 예방하기) 위해 치료해야 하는 환자 수 / NNT = 1 / ARR</div>
+            <div class="txt">한 명의 환자를 구하기(사건 1건 예방하기) 위해 치료해야 하는 환자 수<br>NNT = 1 / ARR</div>
           </div>
         </div>
       </article>
@@ -970,7 +970,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span></div>
-            <div class="txt">상대효과(RR·OR): 위험이 몇 배 증감, intervention 강도 확인 / 절대효과(RD·ARR·NNT): 실제 환자 몇 명 줄었는지, 공중보건학적 결정에 사용, 크기는 기저위험도에 따라 달라짐</div>
+            <div class="txt">상대효과(RR·OR): 위험이 몇 배 증감, intervention 강도 확인<br>절대효과(RD·ARR·NNT): 실제 환자 몇 명 줄었는지, 공중보건학적 결정에 사용, 크기는 기저위험도에 따라 달라짐</div>
           </div>
         </div>
       </article>
@@ -983,7 +983,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span></div>
-            <div class="txt">intervention에 노출되지 않은 경우의 위험도 = 대조군 사건 발생률 = 사전확률(pretest probability) / 절대효과의 크기를 결정</div>
+            <div class="txt">intervention에 노출되지 않은 경우의 위험도 = 대조군 사건 발생률 = 사전확률(pretest probability)<br>절대효과의 크기를 결정</div>
           </div>
         </div>
       </article>
@@ -991,12 +991,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">민감도 = <span class="cloze-blank">[ ? ]</span> (질병 있는 사람에서 양성 확률) / 특이도 = <span class="cloze-blank">[ ? ]</span> (질병 없는 사람에서 음성 확률)<div class="hint">힌트: 민감도·특이도 공식</div></div>
+            <div class="txt">민감도 = <span class="cloze-blank">[ ? ]</span> (질병 있는 사람에서 양성 확률)<br>특이도 = <span class="cloze-blank">[ ? ]</span> (질병 없는 사람에서 음성 확률)<div class="hint">힌트: 민감도·특이도 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">민감도 = <span class="cloze-reveal">TP / (TP + FN)</span> (질병 있는 사람에서 양성 확률) / 특이도 = <span class="cloze-reveal">TN / (TN + FP)</span> (질병 없는 사람에서 음성 확률)</div>
+            <div class="txt">민감도 = <span class="cloze-reveal">TP / (TP + FN)</span> (질병 있는 사람에서 양성 확률)<br>특이도 = <span class="cloze-reveal">TN / (TN + FP)</span> (질병 없는 사람에서 음성 확률)</div>
           </div>
         </div>
       </article>
@@ -1004,12 +1004,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">PPV = <span class="cloze-blank">[ ? ]</span> (사전확률에 비례) / NPV = <span class="cloze-blank">[ ? ]</span> (사전확률에 반비례)<div class="hint">힌트: PPV·NPV 공식</div></div>
+            <div class="txt">PPV = <span class="cloze-blank">[ ? ]</span> (사전확률에 비례)<br>NPV = <span class="cloze-blank">[ ? ]</span> (사전확률에 반비례)<div class="hint">힌트: PPV·NPV 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">PPV = <span class="cloze-reveal">TP / (TP + FP)</span> (사전확률에 비례) / NPV = <span class="cloze-reveal">TN / (TN + FN)</span> (사전확률에 반비례)</div>
+            <div class="txt">PPV = <span class="cloze-reveal">TP / (TP + FP)</span> (사전확률에 비례)<br>NPV = <span class="cloze-reveal">TN / (TN + FN)</span> (사전확률에 반비례)</div>
           </div>
         </div>
       </article>
@@ -1017,12 +1017,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">양성우도비(LR+) = <span class="cloze-blank">[ ? ]</span> / 음성우도비(LR-) = <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 우도비 공식</div></div>
+            <div class="txt">양성우도비(LR+) = <span class="cloze-blank">[ ? ]</span><br>음성우도비(LR-) = <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 우도비 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">양성우도비(LR+) = <span class="cloze-reveal">민감도 / (1 - 특이도)</span> / 음성우도비(LR-) = <span class="cloze-reveal">(1 - 민감도) / 특이도</span></div>
+            <div class="txt">양성우도비(LR+) = <span class="cloze-reveal">민감도 / (1 - 특이도)</span><br>음성우도비(LR-) = <span class="cloze-reveal">(1 - 민감도) / 특이도</span></div>
           </div>
         </div>
       </article>
@@ -1030,12 +1030,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">RoB 2.0 비뚤림 5영역: ① 무작위배정 과정(선택비뚤림) ② 의도된 중재 이탈(수행비뚤림) ③ 결과 데이터 누락(탈락비뚤림) ④ 결과 측정(발견비뚤림) ⑤ <span class="cloze-blank">[ ? ]</span>(보고비뚤림)<div class="hint">힌트: 5번째 영역</div></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역:<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ <span class="cloze-blank">[ ? ]</span>(보고비뚤림)<div class="hint">힌트: 5번째 영역</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">RoB 2.0 비뚤림 5영역: ① 무작위배정 과정(선택비뚤림) ② 의도된 중재 이탈(수행비뚤림) ③ 결과 데이터 누락(탈락비뚤림) ④ 결과 측정(발견비뚤림) ⑤ <span class="cloze-reveal">보고된 결과 선택</span>(보고비뚤림)</div>
+            <div class="txt">RoB 2.0 비뚤림 5영역:<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ <span class="cloze-reveal">보고된 결과 선택</span>(보고비뚤림)</div>
           </div>
         </div>
       </article>
@@ -1048,7 +1048,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag imp">중요</span></div>
-            <div class="txt">메타분석에서 출판된 연구만 사용하여 발생하는 체계적 오류 / 평가: 깔때기그림(funnel plot) · Egger 검정(Egger&#x27;s test)</div>
+            <div class="txt">메타분석에서 출판된 연구만 사용하여 발생하는 체계적 오류<br>평가: 깔때기그림(funnel plot)·Egger 검정(Egger&#x27;s test)</div>
           </div>
         </div>
       </article>
@@ -1056,12 +1056,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">출판비뚤림 예방 방법 2가지: ① <span class="cloze-blank">[ ? ]</span>(any participants enrolled 전) ② <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 등록 / 사전 공개</div></div>
+            <div class="txt">출판비뚤림 예방 방법 2가지:<br>① <span class="cloze-blank">[ ? ]</span>(any participants enrolled 전)<br>② <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 등록 / 사전 공개</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">출판비뚤림 예방 방법 2가지: ① <span class="cloze-reveal">연구 시작 전 임상시험 등록</span>(any participants enrolled 전) ② <span class="cloze-reveal">연구 프로토콜 사전 공개</span></div>
+            <div class="txt">출판비뚤림 예방 방법 2가지:<br>① <span class="cloze-reveal">연구 시작 전 임상시험 등록</span>(any participants enrolled 전)<br>② <span class="cloze-reveal">연구 프로토콜 사전 공개</span></div>
           </div>
         </div>
       </article>
@@ -1069,12 +1069,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">선택비뚤림(selection bias) 유형 3가지: ① <span class="cloze-blank">[ ? ]</span> ② 탈락비뚤림(attrition bias, 추적 손실) ③ <span class="cloze-blank">[ ? ]</span>(병원 환자군이 일반 인구보다 더 아픈 경향)<div class="hint">힌트: ascertainment / 병원 환자 편향</div></div>
+            <div class="txt">선택비뚤림(selection bias) 유형 3가지:<br>① <span class="cloze-blank">[ ? ]</span><br>② 탈락비뚤림(attrition bias, 추적 손실)<br>③ <span class="cloze-blank">[ ? ]</span>(병원 환자군이 일반 인구보다 더 아픈 경향)<div class="hint">힌트: ascertainment / 병원 환자 편향</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">선택비뚤림(selection bias) 유형 3가지: ① <span class="cloze-reveal">표본비뚤림(ascertainment bias)</span> ② 탈락비뚤림(attrition bias, 추적 손실) ③ <span class="cloze-reveal">Berkson bias</span>(병원 환자군이 일반 인구보다 더 아픈 경향)</div>
+            <div class="txt">선택비뚤림(selection bias) 유형 3가지:<br>① <span class="cloze-reveal">표본비뚤림(ascertainment bias)</span><br>② 탈락비뚤림(attrition bias, 추적 손실)<br>③ <span class="cloze-reveal">Berkson bias</span>(병원 환자군이 일반 인구보다 더 아픈 경향)</div>
           </div>
         </div>
       </article>
@@ -1095,12 +1095,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">혼란 최소화 — 연구설계 단계: 무작위배정 · <span class="cloze-blank">[ ? ]</span> · 짝짓기(matching, 환자대조군연구에서 주로 사용)<div class="hint">힌트: 자신이 대조군 역할</div></div>
+            <div class="txt">혼란 최소화 — 연구설계 단계:<br>무작위배정<br><span class="cloze-blank">[ ? ]</span><br>짝짓기(matching, 환자대조군연구에서 주로 사용)<div class="hint">힌트: 자신이 대조군 역할</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">혼란 최소화 — 연구설계 단계: 무작위배정 · <span class="cloze-reveal">교차설계(자신이 대조군 역할)</span> · 짝짓기(matching, 환자대조군연구에서 주로 사용)</div>
+            <div class="txt">혼란 최소화 — 연구설계 단계:<br>무작위배정<br><span class="cloze-reveal">교차설계(자신이 대조군 역할)</span><br>짝짓기(matching, 환자대조군연구에서 주로 사용)</div>
           </div>
         </div>
       </article>
@@ -1108,12 +1108,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">혼란 최소화 — 분석 단계: <span class="cloze-blank">[ ? ]</span>(혼란 및 효과변경 파악) · 다중선형회귀분석(알려진 독립변수 통제)<div class="hint">힌트: strata로 나눠 분석</div></div>
+            <div class="txt">혼란 최소화 — 분석 단계:<br><span class="cloze-blank">[ ? ]</span>(혼란 및 효과변경 파악)<br>다중선형회귀분석(알려진 독립변수 통제)<div class="hint">힌트: strata로 나눠 분석</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">혼란 최소화 — 분석 단계: <span class="cloze-reveal">층화분석</span>(혼란 및 효과변경 파악) · 다중선형회귀분석(알려진 독립변수 통제)</div>
+            <div class="txt">혼란 최소화 — 분석 단계:<br><span class="cloze-reveal">층화분석</span>(혼란 및 효과변경 파악)<br>다중선형회귀분석(알려진 독립변수 통제)</div>
           </div>
         </div>
       </article>
@@ -1121,12 +1121,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">정보비뚤림(information bias) 유형 3가지: ① <span class="cloze-blank">[ ? ]</span> ② <span class="cloze-blank">[ ? ]</span>(Hawthorne effect 포함) ③ 회상비뚤림(후향적 연구에서 흔함, 추적 간격 줄여 감소)<div class="hint">힌트: measurement / performance</div></div>
+            <div class="txt">정보비뚤림(information bias) 유형 3가지:<br>① <span class="cloze-blank">[ ? ]</span><br>② <span class="cloze-blank">[ ? ]</span>(Hawthorne effect 포함)<br>③ 회상비뚤림(후향적 연구에서 흔함, 추적 간격 줄여 감소)<div class="hint">힌트: measurement / performance</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">정보비뚤림(information bias) 유형 3가지: ① <span class="cloze-reveal">측정비뚤림</span> ② <span class="cloze-reveal">수행비뚤림</span>(Hawthorne effect 포함) ③ 회상비뚤림(후향적 연구에서 흔함, 추적 간격 줄여 감소)</div>
+            <div class="txt">정보비뚤림(information bias) 유형 3가지:<br>① <span class="cloze-reveal">측정비뚤림</span><br>② <span class="cloze-reveal">수행비뚤림</span>(Hawthorne effect 포함)<br>③ 회상비뚤림(후향적 연구에서 흔함, 추적 간격 줄여 감소)</div>
           </div>
         </div>
       </article>
@@ -1134,12 +1134,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
-            <div class="txt">체계적문헌고찰의 목적 4가지: ① <span class="cloze-blank">[ ? ]</span> ② 데이터 통합으로 정밀도 향상 ③ 결과의 일관성 평가 ④ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ①편향 방지 / ④하위집단</div></div>
+            <div class="txt">체계적문헌고찰의 목적 4가지:<br>① <span class="cloze-blank">[ ? ]</span><br>② 데이터 통합으로 정밀도 향상<br>③ 결과의 일관성 평가<br>④ <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: ①편향 방지 / ④하위집단</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
-            <div class="txt">체계적문헌고찰의 목적 4가지: ① <span class="cloze-reveal">내러티브 리뷰의 비뚤림 방지</span> ② 데이터 통합으로 정밀도 향상 ③ 결과의 일관성 평가 ④ <span class="cloze-reveal">하위집단 분석으로 적용 가능성 증가</span></div>
+            <div class="txt">체계적문헌고찰의 목적 4가지:<br>① <span class="cloze-reveal">내러티브 리뷰의 비뚤림 방지</span><br>② 데이터 통합으로 정밀도 향상<br>③ 결과의 일관성 평가<br>④ <span class="cloze-reveal">하위집단 분석으로 적용 가능성 증가</span></div>
           </div>
         </div>
       </article>
@@ -1160,12 +1160,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
-            <div class="txt">체계적문헌고찰의 특징: 명확한 가설 · 사전 정의된 방법론 · 사전 선정된 포함 기준 · 다양한 DB 사용 · <span class="cloze-blank">[ ? ]</span>를 통한 비판적 평가 · 메타분석<div class="hint">힌트: RoB 평가</div></div>
+            <div class="txt">체계적문헌고찰의 특징:<br>명확한 가설<br>사전 정의된 방법론<br>사전 선정된 포함 기준<br>다양한 DB 사용<br><span class="cloze-blank">[ ? ]</span>를 통한 비판적 평가<br>메타분석<div class="hint">힌트: RoB 평가</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
-            <div class="txt">체계적문헌고찰의 특징: 명확한 가설 · 사전 정의된 방법론 · 사전 선정된 포함 기준 · 다양한 DB 사용 · <span class="cloze-reveal">비뚤림 위험 평가</span>를 통한 비판적 평가 · 메타분석</div>
+            <div class="txt">체계적문헌고찰의 특징:<br>명확한 가설<br>사전 정의된 방법론<br>사전 선정된 포함 기준<br>다양한 DB 사용<br><span class="cloze-reveal">비뚤림 위험 평가</span>를 통한 비판적 평가<br>메타분석</div>
           </div>
         </div>
       </article>
@@ -1178,7 +1178,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 9</span></div>
-            <div class="txt">장점: 근거 기반 임상 의사결정 개선 / 단점: 포함 개별 연구의 질적 문제 수정 불가, 출판비뚤림에 취약</div>
+            <div class="txt">장점: 근거 기반 임상 의사결정 개선<br>단점: 포함 개별 연구의 질적 문제 수정 불가, 출판비뚤림에 취약</div>
           </div>
         </div>
       </article>
@@ -1191,7 +1191,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 9</span></div>
-            <div class="txt">여러 연구 데이터를 체계적으로 평가·결합 → 통계적 검정력 향상 + 더 정밀한 결과 / 개별 연구 간 유사점·차이점 파악</div>
+            <div class="txt">여러 연구 데이터를 체계적으로 평가·결합<br>→ 통계적 검정력 향상 + 더 정밀한 결과<br>개별 연구 간 유사점·차이점 파악</div>
           </div>
         </div>
       </article>
@@ -1204,7 +1204,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 9</span></div>
-            <div class="txt">출판비뚤림(publication bias)과 통계적 이질성 — 개별 연구의 비뚤림 위험은 비뚤림 위험 척도/체크리스트로 반정량 평가</div>
+            <div class="txt">출판비뚤림(publication bias)과 통계적 이질성<br>개별 연구의 비뚤림 위험은 비뚤림 위험 척도/체크리스트로 반정량 평가</div>
           </div>
         </div>
       </article>
@@ -1212,12 +1212,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
-            <div class="txt">숲그림(forest plot) 구성요소: X축(주요 결과 지표) · 중앙 수직선(귀무값, RR=1·ARR=0) · 사각형(점추정치, 크기=<span class="cloze-blank">[ ? ]</span>) · 수평선(신뢰구간) · <span class="cloze-blank">[ ? ]</span>(전체 결합 결과, 중앙=점추정치, 너비=신뢰구간)<div class="hint">힌트: 각 연구의 상대적 중요도·전체 결과</div></div>
+            <div class="txt">숲그림(forest plot) 구성요소:<br>X축(주요 결과 지표)<br>중앙 수직선(귀무값, RR=1·ARR=0)<br>사각형(점추정치, 크기=<span class="cloze-blank">[ ? ]</span>)<br>수평선(신뢰구간)<br><span class="cloze-blank">[ ? ]</span>(전체 결합 결과, 중앙=점추정치, 너비=신뢰구간)<div class="hint">힌트: 각 연구의 상대적 중요도·전체 결과</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
-            <div class="txt">숲그림(forest plot) 구성요소: X축(주요 결과 지표) · 중앙 수직선(귀무값, RR=1·ARR=0) · 사각형(점추정치, 크기=<span class="cloze-reveal">가중치</span>) · 수평선(신뢰구간) · <span class="cloze-reveal">다이아몬드</span>(전체 결합 결과, 중앙=점추정치, 너비=신뢰구간)</div>
+            <div class="txt">숲그림(forest plot) 구성요소:<br>X축(주요 결과 지표)<br>중앙 수직선(귀무값, RR=1·ARR=0)<br>사각형(점추정치, 크기=<span class="cloze-reveal">가중치</span>)<br>수평선(신뢰구간)<br><span class="cloze-reveal">다이아몬드</span>(전체 결합 결과, 중앙=점추정치, 너비=신뢰구간)</div>
           </div>
         </div>
       </article>
@@ -1243,7 +1243,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 10</span></div>
-            <div class="txt">임상 진료 또는 공중보건 정책에 대한 권고를 포함하는 모든 문서 / 최초: 히포크라테스의 &#x27;Hippocratic corpus&#x27;</div>
+            <div class="txt">임상 진료 또는 공중보건 정책에 대한 권고를 포함하는 모든 문서<br>최초: 히포크라테스의 &#x27;Hippocratic corpus&#x27;</div>
           </div>
         </div>
       </article>
@@ -1256,7 +1256,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 10</span></div>
-            <div class="txt">과거: 연구 디자인이 곧 권고수준 / 현재: 연구 디자인만으로는 권고수준을 정할 수 없음 — 다양한 요소(환자 가치, 이득·위해 균형, 비용 등)를 종합해야 함</div>
+            <div class="txt">과거: 연구 디자인이 곧 권고수준<br>현재: 연구 디자인만으로는 권고수준을 정할 수 없음 — 다양한 요소(환자 가치, 이득·위해 균형, 비용 등)를 종합해야 함</div>
           </div>
         </div>
       </article>
@@ -1264,12 +1264,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">임상진료지침 4요소: ① certainty of evidence(높을수록 강한 권고) ② <span class="cloze-blank">[ ? ]</span>(변동성 클수록 약한 권고) ③ balance of benefits, harms &amp; burdens(차이 클수록 강한 권고) ④ resources and cost(비용 높을수록 강한 권고 어려움)<div class="hint">힌트: 환자 선호도</div></div>
+            <div class="txt">임상진료지침 4요소:<br>① certainty of evidence(높을수록 강한 권고)<br>② <span class="cloze-blank">[ ? ]</span>(변동성 클수록 약한 권고)<br>③ balance of benefits, harms &amp; burdens(차이 클수록 강한 권고)<br>④ resources and cost(비용 높을수록 강한 권고 어려움)<div class="hint">힌트: 환자 선호도</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">임상진료지침 4요소: ① certainty of evidence(높을수록 강한 권고) ② <span class="cloze-reveal">patient&#x27;s values &amp; preferences</span>(변동성 클수록 약한 권고) ③ balance of benefits, harms &amp; burdens(차이 클수록 강한 권고) ④ resources and cost(비용 높을수록 강한 권고 어려움)</div>
+            <div class="txt">임상진료지침 4요소:<br>① certainty of evidence(높을수록 강한 권고)<br>② <span class="cloze-reveal">patient&#x27;s values &amp; preferences</span>(변동성 클수록 약한 권고)<br>③ balance of benefits, harms &amp; burdens(차이 클수록 강한 권고)<br>④ resources and cost(비용 높을수록 강한 권고 어려움)</div>
           </div>
         </div>
       </article>
@@ -1282,7 +1282,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag imp">중요</span></div>
-            <div class="txt">근거 확실성 높음→강한 권고 / 환자 가치 변동성 큼→약한 권고 / 이득-위해 차이 큼→강한 권고 / 비용 높음→강한 권고 어려움</div>
+            <div class="txt">근거 확실성 높음→강한 권고<br>환자 가치 변동성 큼→약한 권고<br>이득-위해 차이 큼→강한 권고<br>비용 높음→강한 권고 어려움</div>
           </div>
         </div>
       </article>
@@ -1290,12 +1290,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">강한 권고(strong recommendation) 조건: ① <span class="cloze-blank">[ ? ]</span> ② 이득-위해 차이 큼 ③ 순이득 크고 확실 ④ <span class="cloze-blank">[ ? ]</span> / 반대면 약한 권고<div class="hint">힌트: 근거 수준 / 비용</div></div>
+            <div class="txt">강한 권고(strong recommendation) 조건:<br>① <span class="cloze-blank">[ ? ]</span><br>② 이득-위해 차이 큼<br>③ 순이득 크고 확실<br>④ <span class="cloze-blank">[ ? ]</span><br>반대면 약한 권고<div class="hint">힌트: 근거 수준 / 비용</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">강한 권고(strong recommendation) 조건: ① <span class="cloze-reveal">근거 확실성 높음</span> ② 이득-위해 차이 큼 ③ 순이득 크고 확실 ④ <span class="cloze-reveal">비용 낮음</span> / 반대면 약한 권고</div>
+            <div class="txt">강한 권고(strong recommendation) 조건:<br>① <span class="cloze-reveal">근거 확실성 높음</span><br>② 이득-위해 차이 큼<br>③ 순이득 크고 확실<br>④ <span class="cloze-reveal">비용 낮음</span><br>반대면 약한 권고</div>
           </div>
         </div>
       </article>
@@ -1303,12 +1303,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span></div>
-            <div class="txt">이상적 DB: <span class="cloze-blank">[ ? ]</span>(전 분야, 인용 DB) · <span class="cloze-blank">[ ? ]</span>(Elsevier, 가장 포괄적, 인용 DB) · Grey Matters(회색문헌) / 주제별: IEEE·ACM(전기전자·컴퓨터공학)<div class="hint">힌트: 전 분야 인용 DB / Elsevier 포괄 DB</div></div>
+            <div class="txt">이상적 DB:<br><span class="cloze-blank">[ ? ]</span>(전 분야, 인용 DB)<br><span class="cloze-blank">[ ? ]</span>(Elsevier, 가장 포괄적, 인용 DB)<br>Grey Matters(회색문헌)<br>주제별: IEEE·ACM(전기전자·컴퓨터공학)<div class="hint">힌트: 전 분야 인용 DB / Elsevier 포괄 DB</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 4</span><span class="tag">CLOZE</span></div>
-            <div class="txt">이상적 DB: <span class="cloze-reveal">Web of Science</span>(전 분야, 인용 DB) · <span class="cloze-reveal">Scopus</span>(Elsevier, 가장 포괄적, 인용 DB) · Grey Matters(회색문헌) / 주제별: IEEE·ACM(전기전자·컴퓨터공학)</div>
+            <div class="txt">이상적 DB:<br><span class="cloze-reveal">Web of Science</span>(전 분야, 인용 DB)<br><span class="cloze-reveal">Scopus</span>(Elsevier, 가장 포괄적, 인용 DB)<br>Grey Matters(회색문헌)<br>주제별: IEEE·ACM(전기전자·컴퓨터공학)</div>
           </div>
         </div>
       </article>
@@ -1316,12 +1316,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3요소: ① best research evidence(문헌이 말하는 것) ② clinical expertise(임상의가 아는 것) ③ <span class="cloze-blank">[ ? ]</span>(환자가 원하는 것)<div class="hint">힌트: 환자가 원하는 것</div></div>
+            <div class="txt">EBM의 3요소:<br>① best research evidence(문헌이 말하는 것)<br>② clinical expertise(임상의가 아는 것)<br>③ <span class="cloze-blank">[ ? ]</span>(환자가 원하는 것)<div class="hint">힌트: 환자가 원하는 것</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 1</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">EBM의 3요소: ① best research evidence(문헌이 말하는 것) ② clinical expertise(임상의가 아는 것) ③ <span class="cloze-reveal">patient values</span>(환자가 원하는 것)</div>
+            <div class="txt">EBM의 3요소:<br>① best research evidence(문헌이 말하는 것)<br>② clinical expertise(임상의가 아는 것)<br>③ <span class="cloze-reveal">patient values</span>(환자가 원하는 것)</div>
           </div>
         </div>
       </article>
@@ -1329,12 +1329,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">순응도 향상 방법: 임상시험에 관심 많고 <span class="cloze-blank">[ ? ]</span> 선정 · 투약지침이 적힌 <span class="cloze-blank">[ ? ]</span> 제공(또는 처방약에 투약시기 명시)<div class="hint">힌트: 대상자 선정 / 투약 보조 도구</div></div>
+            <div class="txt">순응도 향상 방법:<br>임상시험에 관심 많고 <span class="cloze-blank">[ ? ]</span> 선정<br>투약지침이 적힌 <span class="cloze-blank">[ ? ]</span> 제공(또는 처방약에 투약시기 명시)<div class="hint">힌트: 대상자 선정 / 투약 보조 도구</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 2</span><span class="tag">CLOZE</span></div>
-            <div class="txt">순응도 향상 방법: 임상시험에 관심 많고 <span class="cloze-reveal">신뢰성 높은 사람</span> 선정 · 투약지침이 적힌 <span class="cloze-reveal">달력</span> 제공(또는 처방약에 투약시기 명시)</div>
+            <div class="txt">순응도 향상 방법:<br>임상시험에 관심 많고 <span class="cloze-reveal">신뢰성 높은 사람</span> 선정<br>투약지침이 적힌 <span class="cloze-reveal">달력</span> 제공(또는 처방약에 투약시기 명시)</div>
           </div>
         </div>
       </article>
