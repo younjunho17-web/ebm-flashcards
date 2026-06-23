@@ -366,13 +366,18 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
 .cloze-reveal { background: var(--surface-tint-aqua); color: var(--color-text-on-glass); font-weight: var(--fw-semibold);
   border-radius: 6px; padding: 0 6px; }
 .hint { font-size: var(--fs-body-sm); color: var(--color-text-muted); margin-top: var(--space-3); }
+/* CSS 분수 + 아래첨자 (KaTeX 없이 self-contained) */
+.frac { display:inline-flex; flex-direction:column; vertical-align:middle; text-align:center; margin:0 .2em; line-height:1.18; }
+.frac > span { padding:0 .5em; }
+.frac > .den { padding-top:.08em; border-top:1.6px solid currentColor; }
+.txt sub { font-size:.72em; }
 
 </style></head>
 <body>
 <div class="wrap">
   <div class="controls">
     <label><input type="checkbox" id="impToggle"> 중요한 카드만</label>
-    <span id="progress">0 / 105</span>
+    <span id="progress">0 / 110</span>
   </div>
   <div class="deck" id="deck">
     
@@ -1230,7 +1235,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">상대위험도(RR) = <span class="cloze-reveal">노출군 사건 발생확률 ÷ 비노출군 사건 발생확률</span><br>사용 가능한 연구 설계: 코호트·RCT (발생률 산출 가능해야 함)</div>
+            <div class="txt">상대위험도(RR) = <span class="cloze-reveal"><span class="frac"><span class="num">노출군 사건 발생확률</span><span class="den">비노출군 사건 발생확률</span></span></span><br>사용 가능한 연구 설계: 코호트·RCT (발생률 산출 가능해야 함)</div>
           </div>
         </div>
       </article>
@@ -1251,12 +1256,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">교차비(OR) = <span class="cloze-blank">[ ? ]</span><br>Odds = p_event / (1 - p_event)<br>발생률 낮으면 OR ≈ RR 근사 가능<div class="hint">힌트: OR 공식</div></div>
+            <div class="txt">교차비(OR) = <span class="cloze-blank">[ ? ]</span><br>Odds = <span class="frac"><span class="num">p<sub>event</sub></span><span class="den">1 - p<sub>event</sub></span></span><br>발생률 낮으면 OR ≈ RR 근사 가능<div class="hint">힌트: OR 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">교차비(OR) = <span class="cloze-reveal">Odds_intervention / Odds_control</span><br>Odds = p_event / (1 - p_event)<br>발생률 낮으면 OR ≈ RR 근사 가능</div>
+            <div class="txt">교차비(OR) = <span class="cloze-reveal"><span class="frac"><span class="num">Odds<sub>intervention</sub></span><span class="den">Odds<sub>control</sub></span></span></span><br>Odds = <span class="frac"><span class="num">p<sub>event</sub></span><span class="den">1 - p<sub>event</sub></span></span><br>발생률 낮으면 OR ≈ RR 근사 가능</div>
           </div>
         </div>
       </article>
@@ -1264,12 +1269,12 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">위험차(RD) = p_intervention - p_control<br>ARR = <span class="cloze-blank">[ ? ]</span><br>NNT = <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 절대위험감소·치료필요수 공식</div></div>
+            <div class="txt">위험차(RD) = p<sub>intervention</sub> - p<sub>control</sub><br>ARR = <span class="cloze-blank">[ ? ]</span><br>NNT = <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: 절대위험감소·치료필요수 공식</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
-            <div class="txt">위험차(RD) = p_intervention - p_control<br>ARR = <span class="cloze-reveal">(p_control - p_intervention) × 100%</span><br>NNT = <span class="cloze-reveal">1 / ARR</span></div>
+            <div class="txt">위험차(RD) = p<sub>intervention</sub> - p<sub>control</sub><br>ARR = <span class="cloze-reveal">(p<sub>control</sub> - p<sub>intervention</sub>) × 100%</span><br>NNT = <span class="cloze-reveal"><span class="frac"><span class="num">1</span><span class="den">ARR</span></span></span></div>
           </div>
         </div>
       </article>
@@ -1282,7 +1287,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag imp">중요</span></div>
-            <div class="txt">한 명의 환자를 구하기(사건 1건 예방하기) 위해 치료해야 하는 환자 수<br>NNT = 1 / ARR</div>
+            <div class="txt">한 명의 환자를 구하기(사건 1건 예방하기) 위해 치료해야 하는 환자 수<br>NNT = <span class="frac"><span class="num">1</span><span class="den">ARR</span></span></div>
           </div>
         </div>
       </article>
@@ -1295,24 +1300,37 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span></div>
-            <div class="txt">상대효과(RR·OR): 위험이 몇 배 증감, intervention 강도 확인<br>절대효과(RD·ARR·NNT): 실제 환자 몇 명 줄었는지, 공중보건학적 결정에 사용, 크기는 기저위험도에 따라 달라짐</div>
+            <div class="txt">상대효과(RR·OR): 위험이 몇 배 증감, intervention 강도 확인<br>절대효과(RD·ARR·NNT): 실제 환자 몇 명 줄었는지, 공중보건학적 결정에 사용</div>
           </div>
         </div>
       </article>
-      <article class="card" id="fc051" data-i="71" data-imp="0">
+      <article class="card cloze" id="fc079" data-i="71" data-imp="0">
         <div class="inner">
           <div class="face front">
-            <div class="qmeta"><span class="tag">강의 7</span></div>
-            <div class="txt">기저위험도(baseline risk)란? 다른 명칭은?</div>
+            <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
+            <div class="txt">절대효과(RD·ARR·NNT)의 크기는 <span class="cloze-blank">[ ? ]</span>에 따라 달라진다<br>→ 같은 상대효과(RR)라도 기저위험도가 다르면 ARR·NNT가 달라짐 (상대효과 RR·OR은 기저위험도와 무관)<div class="hint">힌트: 절대효과 크기를 좌우하는 것</div></div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
-            <div class="qmeta"><span class="tag">강의 7</span></div>
-            <div class="txt">intervention에 노출되지 않은 경우의 위험도 = 대조군 사건 발생률 = 사전확률(pretest probability)<br>절대효과의 크기를 결정</div>
+            <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
+            <div class="txt">절대효과(RD·ARR·NNT)의 크기는 <span class="cloze-reveal">기저위험도(baseline risk)</span>에 따라 달라진다<br>→ 같은 상대효과(RR)라도 기저위험도가 다르면 ARR·NNT가 달라짐 (상대효과 RR·OR은 기저위험도와 무관)</div>
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc052" data-i="72" data-imp="0">
+      <article class="card cloze" id="fc051" data-i="72" data-imp="0">
+        <div class="inner">
+          <div class="face front">
+            <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
+            <div class="txt">기저위험도(baseline risk):<br>intervention에 노출되지 않은 경우의 위험도<br>= <span class="cloze-blank">[ ? ]</span><br>= <span class="cloze-blank">[ ? ]</span><div class="hint">힌트: control group event rate</div></div>
+            <div class="flip-hint">클릭 · Space 로 뒤집기</div>
+          </div>
+          <div class="face back">
+            <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
+            <div class="txt">기저위험도(baseline risk):<br>intervention에 노출되지 않은 경우의 위험도<br>= <span class="cloze-reveal">대조군 사건 발생률</span><br>= <span class="cloze-reveal">사전확률(pretest probability)</span></div>
+          </div>
+        </div>
+      </article>
+      <article class="card cloze" id="fc052" data-i="73" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
@@ -1321,11 +1339,11 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">민감도 = <span class="cloze-reveal">TP / (TP + FN)</span> (질병 있는 사람에서 양성 확률)<br>특이도 = <span class="cloze-reveal">TN / (TN + FP)</span> (질병 없는 사람에서 음성 확률)</div>
+            <div class="txt">민감도 = <span class="cloze-reveal"><span class="frac"><span class="num">TP</span><span class="den">TP+FN</span></span></span> (질병 있는 사람에서 양성 확률)<br>특이도 = <span class="cloze-reveal"><span class="frac"><span class="num">TN</span><span class="den">TN+FP</span></span></span> (질병 없는 사람에서 음성 확률)</div>
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc053" data-i="73" data-imp="0">
+      <article class="card cloze" id="fc053" data-i="74" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
@@ -1334,11 +1352,11 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">PPV = <span class="cloze-reveal">TP / (TP + FP)</span> (사전확률에 비례)<br>NPV = <span class="cloze-reveal">TN / (TN + FN)</span> (사전확률에 반비례)</div>
+            <div class="txt">PPV = <span class="cloze-reveal"><span class="frac"><span class="num">TP</span><span class="den">TP+FP</span></span></span> (사전확률에 비례)<br>NPV = <span class="cloze-reveal"><span class="frac"><span class="num">TN</span><span class="den">TN+FN</span></span></span> (사전확률에 반비례)</div>
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc054" data-i="74" data-imp="0">
+      <article class="card cloze" id="fc054" data-i="75" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
@@ -1347,24 +1365,76 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 7</span><span class="tag">CLOZE</span></div>
-            <div class="txt">양성우도비(LR+) = <span class="cloze-reveal">민감도 / (1 - 특이도)</span><br>음성우도비(LR-) = <span class="cloze-reveal">(1 - 민감도) / 특이도</span></div>
+            <div class="txt">양성우도비(LR+) = <span class="cloze-reveal"><span class="frac"><span class="num">민감도</span><span class="den">1 - 특이도</span></span></span><br>음성우도비(LR-) = <span class="cloze-reveal"><span class="frac"><span class="num">1 - 민감도</span><span class="den">특이도</span></span></span></div>
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc055" data-i="75" data-imp="0">
+      <article class="card cloze" id="fc055a" data-i="76" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">RoB 2.0 비뚤림 5영역:<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ <span class="cloze-blank">[ ? ]</span>(보고비뚤림)<div class="hint">힌트: 5번째 영역</div></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(<span class="cloze-blank">[ ? ]</span>)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
             <div class="flip-hint">클릭 · Space 로 뒤집기</div>
           </div>
           <div class="face back">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
-            <div class="txt">RoB 2.0 비뚤림 5영역:<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ <span class="cloze-reveal">보고된 결과 선택</span>(보고비뚤림)</div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(<span class="cloze-reveal">선택비뚤림</span>)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
           </div>
         </div>
       </article>
-      <article class="card" id="fc056" data-i="76" data-imp="1">
+      <article class="card cloze" id="fc055b" data-i="77" data-imp="0">
+        <div class="inner">
+          <div class="face front">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(<span class="cloze-blank">[ ? ]</span>)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
+            <div class="flip-hint">클릭 · Space 로 뒤집기</div>
+          </div>
+          <div class="face back">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(<span class="cloze-reveal">수행비뚤림</span>)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
+          </div>
+        </div>
+      </article>
+      <article class="card cloze" id="fc055c" data-i="78" data-imp="0">
+        <div class="inner">
+          <div class="face front">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(<span class="cloze-blank">[ ? ]</span>)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
+            <div class="flip-hint">클릭 · Space 로 뒤집기</div>
+          </div>
+          <div class="face back">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(<span class="cloze-reveal">탈락비뚤림</span>)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
+          </div>
+        </div>
+      </article>
+      <article class="card cloze" id="fc055d" data-i="79" data-imp="0">
+        <div class="inner">
+          <div class="face front">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(<span class="cloze-blank">[ ? ]</span>)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
+            <div class="flip-hint">클릭 · Space 로 뒤집기</div>
+          </div>
+          <div class="face back">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(<span class="cloze-reveal">발견비뚤림</span>)<br>⑤ 보고된 결과 선택(보고비뚤림)</div>
+          </div>
+        </div>
+      </article>
+      <article class="card cloze" id="fc055e" data-i="80" data-imp="0">
+        <div class="inner">
+          <div class="face front">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(<span class="cloze-blank">[ ? ]</span>)</div>
+            <div class="flip-hint">클릭 · Space 로 뒤집기</div>
+          </div>
+          <div class="face back">
+            <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
+            <div class="txt">RoB 2.0 비뚤림 5영역 (영역 → 비뚤림 종류):<br>① 무작위배정 과정(선택비뚤림)<br>② 의도된 중재 이탈(수행비뚤림)<br>③ 결과 데이터 누락(탈락비뚤림)<br>④ 결과 측정(발견비뚤림)<br>⑤ 보고된 결과 선택(<span class="cloze-reveal">보고비뚤림</span>)</div>
+          </div>
+        </div>
+      </article>
+      <article class="card" id="fc056" data-i="81" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag imp">중요</span></div>
@@ -1377,7 +1447,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc058" data-i="77" data-imp="0">
+      <article class="card cloze" id="fc058" data-i="82" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
@@ -1390,7 +1460,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc059" data-i="78" data-imp="0">
+      <article class="card cloze" id="fc059" data-i="83" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
@@ -1403,7 +1473,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc060" data-i="79" data-imp="0">
+      <article class="card cloze" id="fc060" data-i="84" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
@@ -1416,7 +1486,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc061" data-i="80" data-imp="0">
+      <article class="card cloze" id="fc061" data-i="85" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
@@ -1429,7 +1499,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc062" data-i="81" data-imp="0">
+      <article class="card cloze" id="fc062" data-i="86" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span></div>
@@ -1442,7 +1512,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc057a" data-i="82" data-imp="1">
+      <article class="card cloze" id="fc057a" data-i="87" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1455,7 +1525,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc057b" data-i="83" data-imp="1">
+      <article class="card cloze" id="fc057b" data-i="88" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 8</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1468,7 +1538,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc063" data-i="84" data-imp="0">
+      <article class="card cloze" id="fc063" data-i="89" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
@@ -1481,7 +1551,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card" id="fc064" data-i="85" data-imp="0">
+      <article class="card" id="fc064" data-i="90" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span></div>
@@ -1494,7 +1564,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc065" data-i="86" data-imp="0">
+      <article class="card cloze" id="fc065" data-i="91" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
@@ -1507,7 +1577,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card" id="fc066" data-i="87" data-imp="0">
+      <article class="card" id="fc066" data-i="92" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span></div>
@@ -1520,7 +1590,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card" id="fc067" data-i="88" data-imp="0">
+      <article class="card" id="fc067" data-i="93" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span></div>
@@ -1533,7 +1603,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card" id="fc068" data-i="89" data-imp="0">
+      <article class="card" id="fc068" data-i="94" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span></div>
@@ -1546,7 +1616,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc069" data-i="90" data-imp="0">
+      <article class="card cloze" id="fc069" data-i="95" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
@@ -1559,7 +1629,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc070" data-i="91" data-imp="0">
+      <article class="card cloze" id="fc070" data-i="96" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 9</span><span class="tag">CLOZE</span></div>
@@ -1572,7 +1642,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card" id="fc071" data-i="92" data-imp="0">
+      <article class="card" id="fc071" data-i="97" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span></div>
@@ -1585,7 +1655,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card" id="fc072" data-i="93" data-imp="0">
+      <article class="card" id="fc072" data-i="98" data-imp="0">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span></div>
@@ -1598,7 +1668,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc073a" data-i="94" data-imp="1">
+      <article class="card cloze" id="fc073a" data-i="99" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1611,7 +1681,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc073b" data-i="95" data-imp="1">
+      <article class="card cloze" id="fc073b" data-i="100" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1624,7 +1694,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc073c" data-i="96" data-imp="1">
+      <article class="card cloze" id="fc073c" data-i="101" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1637,7 +1707,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc073d" data-i="97" data-imp="1">
+      <article class="card cloze" id="fc073d" data-i="102" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1650,7 +1720,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card" id="fc074" data-i="98" data-imp="1">
+      <article class="card" id="fc074" data-i="103" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag imp">중요</span></div>
@@ -1663,7 +1733,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc075aa" data-i="99" data-imp="1">
+      <article class="card cloze" id="fc075aa" data-i="104" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1676,7 +1746,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc075ab" data-i="100" data-imp="1">
+      <article class="card cloze" id="fc075ab" data-i="105" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1689,7 +1759,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc075ac" data-i="101" data-imp="1">
+      <article class="card cloze" id="fc075ac" data-i="106" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1702,7 +1772,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc075ad" data-i="102" data-imp="1">
+      <article class="card cloze" id="fc075ad" data-i="107" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1715,7 +1785,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc075ba" data-i="103" data-imp="1">
+      <article class="card cloze" id="fc075ba" data-i="108" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
@@ -1728,7 +1798,7 @@ kbd { font-family: var(--font-mono); font-size: var(--fs-caption);
           </div>
         </div>
       </article>
-      <article class="card cloze" id="fc075bb" data-i="104" data-imp="1">
+      <article class="card cloze" id="fc075bb" data-i="109" data-imp="1">
         <div class="inner">
           <div class="face front">
             <div class="qmeta"><span class="tag">강의 10</span><span class="tag">CLOZE</span><span class="tag imp">중요</span></div>
